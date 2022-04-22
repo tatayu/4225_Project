@@ -31,7 +31,7 @@ const Landing = () => {
                 .post('/api/coins/getOutcome', data, config)
                 .then((res) => {
                     console.log(res.data);
-                    if (res.data.buyFlag == 'true') {
+                    if (res.data.buyFlag === 'true') {
                         Swal.fire(
                             'You should buy it',
                             'Last update on ' + res.data.timestamp,
