@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Coins = require('../../Models/coins');
+const Coins = require('../../Models/Coins');
 
 router.post('/getOutcome', async (req, res) => {
     try {
