@@ -1,0 +1,64 @@
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  height: 100%;
+  width: 100%;
+  background-image: url("../public/b1.jpg");
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+.title{
+  font-size: 60px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(255, 196, 0);
+  text-align: center;
+  font-weight: lighter;
+}
+
+.select{
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-weight: lighter;
+}
+
+#coins{
+  font-size: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-weight: lighter;
+  background-color: rgb(255, 196, 0);
+  width: 300px;
+  border-width: 5px;
+  border-radius: 6px;
+  border-color: rgb(255, 255, 255);
+}
+
+.container{
+  height: 200px;
+  position: relative;
+}
+
+.btn{
+  position: relative; 
+  margin-top: 8%;
+  left: 50%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;;
+  font-size: 30px;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  width: 100px;
+  border-radius: 8px;
+  background-color: rgb(255, 196, 0);
+  border-color: rgb(255, 255, 255);
+}
