@@ -36,13 +36,17 @@ const Landing = () => {
                             'You should buy it',
                             'Last update on ' + res.data.timestamp,
                             'success'
-                        );
+                        ).then(function () {
+                            window.location.reload();
+                        });
                     } else {
                         Swal.fire(
                             'You should not buy it',
                             'Last update on ' + res.data.timestamp,
-                            'success'
-                        );
+                            'error'
+                        ).then(function () {
+                            window.location.reload();
+                        });
                     }
                 });
         } catch (error) {
@@ -74,62 +78,3 @@ const Landing = () => {
 };
 
 export default Landing;
-
-// <!DOCTYPE html>
-// <html lang="en">
-// <head>
-//     <meta charset="UTF-8">
-//     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//     <title>index</title>
-//     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-//     <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
-// </head>
-// <body>
-//     <div class="title">
-//         <h1> Should I Buy?</h1>
-//     </div>
-
-//     <div class="select">
-//         <h1> Please select the coin here:</h1>
-//         <select id="coins"
-//             <option value="BTC">BTC</option>
-//             <option value="ETH">ETH</option>
-//             <option value="LTC">LTC</option>
-//         </select>
-
-//     </div class="container">
-//         <button class="btn" onclick="process()">OK</button>
-//         <script>
-//             async function process() {
-//                 //TODO: call backend to get the result output
-//                 //var output = 'YES';
-//             try{
-//                 var coin = document.getElementById('coins');
-//                 var selec_index = coin.selectedIndex;
-//                 var coin_type = coin.options[selec_index].text;
-//                 const config = {
-//                   headers: {
-//                     'Content-Type':'application/json'
-//                   }
-//                 }
-//                 await axios
-//                     .post(
-//                     'api/coins/getOutcome',
-//                     {coinType: coin_type},
-//                     config
-//                     )
-//                     .then((res) => {
-//                     swal('Result ' + res.body + '...');
-//                     });
-//             } catch (err) {
-//                 console.log(err);
-//             }
-//                     //swal('processing on ' + coin_type + '...');
-//                 //document.getElementById('result').textContent = output;
-// }
-//         </script>
-
-//     <div>
-// </body>
-// </html>
