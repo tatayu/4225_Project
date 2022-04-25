@@ -68,7 +68,6 @@ const Landing = () => {
                         value={coinType}>
                         <option value="BTC">BTC</option>
                         <option value="ETH">ETH</option>
-                        <option value="LTC">LTC</option>
                     </select>
                 </div>
                 <button className="btn">OK</button>
